@@ -1,5 +1,6 @@
 import React from "react";
 import {Redirect, Route, Switch} from "react-router-dom";
+import FooterSmall from "../components/Footers/FooterSmall.jsx";
 import Navbar from "../components/Navbars/AuthNavbar.jsx";
 import Register from "../views/auth/Register.jsx";
 

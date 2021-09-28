@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import EmployerRegister from "./EmployerRegister";
-import JobseekerRegister from "./JobseekerRegister";
+import JobseekerRegister from "./JobSeekerRegister";
 
 
 export default function Register() {
@@ -30,7 +30,7 @@ export default function Register() {
                                     type="button"
                                     onClick={() => setJobseeker(false)}
                                 >
-                                    iş Veren
+                                    iş Veren Birim
                                 </button>
 
                             </div>

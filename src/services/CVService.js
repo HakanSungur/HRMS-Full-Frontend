@@ -33,12 +33,12 @@ export default class CVService{
     });
    }
 
-   addPicture(cvId, picturefile){
+   addPicture(cvId, pictureFile){
        
     return axios({
         method:"POST",
         url: `http://localhost:8080/api/cvs/addPicture?cvId=${cvId}`,
-        data: puctureFile,
+        data: pictureFile,
         headers: "content-type: application/json",
     });
 
