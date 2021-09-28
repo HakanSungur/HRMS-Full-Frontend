@@ -17,7 +17,7 @@ export default function FooterSmall(props) {
                             <div className="text-sm text-blueGray-400 font-semibold py-1 text-center md:text-left">
                                 Copyright © {new Date().getFullYear()} İnsan Kaynakları Yönetim Sistemi by{" "}
                                 <a
-                                    href="#"
+                                    href="!#"
                                     className="text-white hover:text-blueGray-300 text-sm font-semibold py-1"
                                 >
                                     Hakan SUNGUR
@@ -28,7 +28,7 @@ export default function FooterSmall(props) {
                             <ul className="flex flex-wrap list-none md:justify-end  justify-center">
                                 <li>
                                     <a
-                                        href="#"
+                                        href="!#"
                                         className="text-white hover:text-blueGray-300 text-sm font-semibold block py-1 px-3"
                                     >
                                         Hakan SUNGUR
@@ -36,7 +36,7 @@ export default function FooterSmall(props) {
                                 </li>
                                 <li>
                                     <a
-                                        href="#"
+                                        href="!#"
                                         className="text-white hover:text-blueGray-300 text-sm font-semibold block py-1 px-3"
                                     >
                                         Hakkımda

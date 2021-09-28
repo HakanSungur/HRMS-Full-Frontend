@@ -42,7 +42,7 @@ import Swal from "sweetalert2";
         onSubmit={(values) => {
           if (!values.isTerm) {
             console.log("sözleşme kabul edilmeli");
-          } else if (values.password != values.confirmPassword) {
+          } else if (values.password !== values.confirmPassword) {
             console.log("Şifreler uyuşmuyor");
           } else {
             const employer = {
@@ -104,14 +104,14 @@ import Swal from "sweetalert2";
           <Form>
             {
               (isDisabled =
-                values.companyName == "" ||
-                values.email == "" ||
-                values.password == "" ||
-                values.confirmPassword == "" ||
-                values.website == "" ||
-                values.phoneNumber == "" ||
-                values.isTerm == false ||
-                values.password != values.confirmPassword)
+                values.companyName === "" ||
+                values.email === "" ||
+                values.password === "" ||
+                values.confirmPassword === "" ||
+                values.website === "" ||
+                values.phoneNumber === "" ||
+                values.isTerm === false ||
+                values.password !== values.confirmPassword)
             }
             <div className="relative w-full mb-3">
               <input
@@ -201,8 +201,8 @@ import Swal from "sweetalert2";
                 value={values.confirmPassword}
                 onChange={handleChange}
               />
-              {values.password != values.confirmPassword &&
-              values.confirmPassword != "" ? (
+              {values.password !== values.confirmPassword &&
+              values.confirmPassword !== "" ? (
                 <span className={"block text-red-500 font-semibold mt-2"}>
                   Şifreler uyuşmuyor{" "}
                 </span>

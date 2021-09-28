@@ -13,6 +13,7 @@ export default function Index() {
                             <img
                                 className={"mx-auto"}
                                 src={require("../assets/img/index_logo.png").default}
+                                alt="..."
                             />
                             <br/>
                             <br/>
@@ -224,7 +225,7 @@ export default function Index() {
                                         BTK AKADEMİ
                                     </h5>
                                     <a href={"https://www.btkakademi.gov.tr/portal/"}
-                                       target={"_blank"}>
+                                       >
                                         <div
                                             className="hover:-mt-4 relative flex flex-col min-w-0 mb-6 break-words bg-white w-full shadow-lg rounded-lg ease-linear transition-all duration-150">
                                             <img
@@ -240,7 +241,7 @@ export default function Index() {
                                     <h5 className="font-semibold text-center">
                                         Engin Demiroğ - Kodlama.io
                                     </h5>
-                                    <a href={"https://kodlama.io/"} target={"_blank"}>
+                                    <a href={"https://kodlama.io/"} >
                                         <div
                                             className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
                                             <img
@@ -256,7 +257,7 @@ export default function Index() {
                                     <h5 className="font-semibold text-center">
                                         1 MİLYON İSTİHDAM
                                     </h5>
-                                    <a href={"https://1milyonistihdam.hmb.gov.tr/"} target={"_blank"}>
+                                    <a href={"https://1milyonistihdam.hmb.gov.tr/"} >
                                         <div
                                             className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
                                             <img
@@ -291,7 +292,7 @@ export default function Index() {
                             </p>
                             <a
                                 href="https://github.com/hakansungur"
-                                target="_blank"
+                                
                                 className="github-star mt-2 inline-block text-white font-bold px-4 py-3 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm"
                             >
                                 <i className="fab fa-lg fa-github"></i> Github

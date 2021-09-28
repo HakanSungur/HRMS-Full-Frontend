@@ -1,269 +1,296 @@
-import React from 'react';
+import React from "react";
 import JobSeekerService from "../../services/JobSeekerService";
-import {Form, Formik} from 'formik';
+import { Form, Formik } from "formik";
 import * as Yup from "yup";
-import Swal from 'sweetalert2'
-import CVService from "../../services/CVService";
+import Swal from "sweetalert2";
 
 function JobseekerRegister(props) {
+  const jobSeekerService = new JobSeekerService();
 
-    const jobSeekerService = new JobSeekerService();
+  let isDisabled;
 
-    const curriculaVitaeService = new CVService();
+  return (
+    <div className="flex-auto px-4 lg:px-10 mt-5 py-2 pt-0">
+      <Formik
+        initialValues={{
+          id: 0,
+          firstName: "",
+          lastName: "",
+          identityNumber: "",
+          // birthDate: "",
+          email: "",
+          password: "",
+          confirmPassword: "",
+          isTerm: false,
+        }}
+        validationSchema={Yup.object({
+          firstName: Yup.string().required("Bu alan boş bırakılamaz!"),
+          email: Yup.string()
+            .email("Email formata uygun değil!")
+            .required("Bu alan boş bırakılamaz!"),
+          lastName: Yup.string().required("Bu alan boş bırakılamaz!"),
+          identityNumber: Yup.string().required("Bu alan boş bırakılamaz!"),
+          password: Yup.string()
+            .required("Bu alan boş bırakılamaz!")
+            .min(6, "Şifre 6 karakterden kısa olamaz!")
+            .max(25, "Şifre 25 karakterden uzun olamaz!"),
+          confirmPassword: Yup.string().required("Bu alan boş bırakılamaz!"),
+          // birthDate: Yup.string().required("Bu alan boş bırakılamaz!"),
+          isTerm: Yup.boolean().required(
+            "Devam edebilmek için Sözleşmeyi onaylayınız!"
+          ),
+        })}
+        onSubmit={(values) => {
+          if (!values.isTerm) {
+            console.log("sözleşme kabul edilmeli");
+          } else if (values.password !== values.confirmPassword) {
+            console.log("Şifreler uyuşmuyor");
+          } else {
+            const jobseeker = {
+              id: values.id,
+              firstName: values.firstName,
+              lastName: values.lastName,
+              identityNumber: values.identityNumber,
+              birthDate: values.birthDate,
+              email: values.email,
+              password: values.password,
+            };
 
-    let isDisabled;
-
-    return (
-        <div className="flex-auto px-4 lg:px-10 mt-5 py-2 pt-0">
-            <Formik
-                initialValues={{
-                    id: 0,
-                    firstName: "",
-                    lastName: "",
-                    identityNumber: "",
-                    // birthDate: "",
-                    email: "",
-                    password: "",
-                    confirmPassword: "",
-                    isTerm: false
-                }}
-                validationSchema={Yup.object({
-                                                 firstName: Yup.string().required("Bu alan boş bırakılamaz!"),
-                                                 email: Yup.string().email("Email formata uygun değil!").required(
-                                                     "Bu alan boş bırakılamaz!"),
-                                                 lastName: Yup.string().required("Bu alan boş bırakılamaz!"),
-                                                 identityNumber: Yup.string()
-                                                     .required("Bu alan boş bırakılamaz!"),
-                                                 password: Yup.string()
-                                                     .required("Bu alan boş bırakılamaz!")
-                                                     .min(
-                                                         6,
-                                                         "Şifre 6 karakterden kısa olamaz!")
-                                                     .max(25, "Şifre 25 karakterden uzun olamaz!"),
-                                                 confirmPassword: Yup.string().required("Bu alan boş bırakılamaz!"),
-                                                 // birthDate: Yup.string().required("Bu alan boş bırakılamaz!"),
-                                                 isTerm: Yup.boolean().required(
-                                                     "Devam edebilmek için Sözleşmeyi onaylayınız!")
-                                             })}
-
-                onSubmit={(values) => {
-                    if (!values.isTerm) {
-                        console.log("sözleşme kabul edilmeli")
-
-                    } else if (values.password != values.confirmPassword) {
-                        console.log("Şifreler uyuşmuyor")
+            jobSeekerService
+              .addJobSeeker(jobseeker)
+              .then((res) => {
+                if (res.includes("Error")) {
+                  Swal.fire({
+                    icon: "error",
+                    text: res.split("Error: ")[1],
+                    confirmButtonText: `Tamam`,
+                    backdrop: ` rgba(161,0,0,0.44) `,
+                  });
+                } else {
+                  Swal.fire({
+                    icon: "success",
+                    text: res.split("Success: ")[1],
+                    confirmButtonText: `Tamam`,
+                    timer: 7000,
+                    backdrop: ` rgba(0,120,0,0.44) `,
+                  }).then((result) => {
+                    if (!result.isConfirmed) {
+                      setTimeout(() => {
+                        values = "";
+                      }, 7000);
+                      window.location.href = "Login.js";
                     } else {
-                        const jobseeker = {
-                            id: values.id,
-                            firstName: values.firstName,
-                            lastName: values.lastName,
-                            identityNumber: values.identityNumber,
-                            birthDate: values.birthDate,
-                            email: values.email,
-                            password: values.password
-                        };
-
-                        jobSeekerService.addJobSeeker(jobseeker).then((res) => {
-                            if (res.includes("Error")) {
-                                Swal.fire({
-                                              icon: 'error',
-                                              text: res.split("Error: ")[1],
-                                              confirmButtonText: `Tamam`,
-                                              backdrop: ` rgba(161,0,0,0.44) `
-                                          })
-                            } else {
-                                Swal.fire({
-                                              icon: 'success',
-                                              text: res.split("Success: ")[1],
-                                              confirmButtonText: `Tamam`,
-                                              timer: 7000,
-                                              backdrop: ` rgba(0,120,0,0.44) `
-                                          }).then((result) => {
-                                    if (!result.isConfirmed) {
-                                        setTimeout(() => {
-                                            values = ''
-                                        }, 7000)
-                                        window.location.href = "Login.js"
-                                    } else {
-                                        setTimeout(() => {
-                                            values = ''
-                                        }, 7000)
-                                        window.location.href = "Login.js"
-                                    }
-                                })
-
-
-                            }
-                        }).catch((err) => {
-                            console.log(err)
-                        })
+                      setTimeout(() => {
+                        values = "";
+                      }, 7000);
+                      window.location.href = "Login.js";
                     }
-                }}
-
-            >
-                {
-                    ({
-                         values,
-                         errors,
-                         touched,
-                         handleSubmit,
-                         handleReset,
-                         handleChange,
-                         isSubmitting,
-                         dirty
-                     }) => (
-                        <Form>
-                            {isDisabled = (values.firstName == '' || values.lastName == '' || values.ídentityNumber == '' || values.identityNumber.length < 11 || values.birthDate == '' || values.email == '' || values.confirmPassword == '' || values.isTerm == false || values.password != values.confirmPassword)}
-                            <div className="flex w-full">
-                                <input type="text"
-                                       className="border-0 px-3 py-3 placeholder-blueGray-600 font-semibold text-blueGray-600 mr-2 bg-white rounded text-sm shadow focus:outline-none focus:ring w-1/2 ease-linear transition-all duration-150"
-                                       placeholder="İsim"
-                                       id="firstName"
-                                       value={values.firstName}
-                                       onChange={handleChange}
-                                />
-                                <input type="text"
-                                       className="border-0 px-3 py-3 placeholder-blueGray-600 font-semibold text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-1/2 ease-linear transition-all duration-150"
-                                       placeholder="Soyisim"
-                                       id="lastName"
-                                       value={values.lastName}
-                                       onChange={handleChange}
-                                />
-                            </div>
-                            <div className={"w-full flex mb-2 mt-1"}>
-                                {errors.firstName && touched.firstName ? (
-                                    <div
-                                        className={"text-red-500 font-semibold w-1/2"}>{errors.firstName}</div>
-                                ) : null}
-                                {errors.lastName && touched.lastName ? (
-                                    <div
-                                        className={"text-red-500 font-semibold w-1/2 "}>{errors.lastName}</div>
-                                ) : null}
-                            </div>
-                            <div className="relative w-full mb-3">
-                                <input type="text"
-                                       className="border-0 px-3 py-3 placeholder-blueGray-600 font-semibold text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                       placeholder="Tc kimlik numarası"
-                                       id="identityNumber"
-                                       maxLength={11}
-                                       value={values.identityNumber}
-                                       onChange={handleChange}
-                                />
-                                {
-                                    (values.identityNumber.length < 11 && values.identityNumber != "") ?
-                                        <span className={"block text-red-500 font-semibold mt-2"}>
-                                    Gerçek bir kişi değil </span> : ""
-                                }
-                            </div>
-                            <div className="relative w-full mb-3">
-                                <input type="date"
-                                       className="border-0 px-3 py-3 placeholder-blueGray-600 font-semibold text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                       placeholder="Doğum Tarihi"
-                                       id="birthDate"
-                                       value={values.birthDate}
-                                       onChange={handleChange}
-
-                                />
-                                
-                            </div>
-                            <div className="relative w-full mb-3">
-                                <input
-                                    type="email"
-                                    className="border-0 px-3 py-3 placeholder-blueGray-600 font-semibold text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                    placeholder="E-posta adresi"
-                                    id={"email"}
-                                    value={values.email}
-                                    onChange={handleChange}
-                                />
-                                {errors.email && touched.email ? (
-                                    <div className={"text-red-500 font-semibold mt-2"}>{errors.email}</div>
-                                ) : null}
-                            </div>
-                            <div className="relative w-full mb-3">
-                                <input type="password"
-                                       className="border-0 px-3 py-3 font-semibold placeholder-blueGray-600 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                       placeholder="Şifre"
-                                       id="password"
-                                       maxLength={25}
-                                       value={values.password}
-                                       onChange={handleChange}
-                                />
-                                {errors.password && touched.password ? (
-                                    <div className={"text-red-500 font-semibold mt-2"}>{errors.password}</div>
-                                ) : null}
-                            </div>
-                            <div className="relative w-full mb-5">
-                                <input
-                                    type="password"
-                                    className="border-0 px-3 py-3 placeholder-blueGray-600 font-semibold text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                    placeholder="Şifre onay"
-                                    id="confirmPassword"
-                                    maxLength={25}
-                                    onChange={handleChange}
-                                    value={values.confirmPassword}
-
-                                />
-                                {
-                                    (values.password != values.confirmPassword && values.confirmPassword != "") ?
-                                        <span className={"block text-red-500 font-semibold mt-2"}>
-                                    Şifreler uyuşmuyor </span> : ""
-                                }
-                                {errors.confirmPassword && touched.confirmPassword ? (
-                                    <div className={"text-red-500 font-semibold mt-2"}>{errors.confirmPassword}</div>
-                                ) : null}
-                            </div>
-
-                            <div>
-                                <label className="items-center cursor-pointer">
-                                    <input
-                                        type="checkbox"
-                                        className="form-checkbox cursor-pointer border-0 rounded-full font-semibold text-lightBlue-500 ml-1 w-5 h-5 ease-linear transition-all duration-150"
-                                        id="isTerm"
-                                        onChange={handleChange}
-                                        onClick={() => values.isTerm = true}
-                                    />
-                                </label>
-                                {errors.isTerm && touched.isTerm ? (
-                                    <div className={"text-red-500 mt-2"}>{errors.isTerm}</div>
-                                ) : null}
-                                <span className="ml-2 text-sm font-semibold font-semibold text-white">
-                        <a
-                            className="text-lightBlue-500 cursor-pointer "
-                            onClick={(e) => {
-                                Swal.fire({
-                                              title: "Hizmet Sözleşmesi",
-                                              html: "<p style='font-weight: 600;font-size: 15px;margin-left: 2rem;margin-right: 2rem;font-family: Samsung Sans;'>HÜKÜMLER SÖZLEŞME HAKKINDA Aday, \"Üyeliği Tamamla\" \"Facebook ile Üye Ol\" veya benzeri ifadeleri tıklayarak, kaydolarak, erişimde bulunarak veya hizmetlerimizi kullanarak, Kariyer.net Elektronik Yayıncılık ve İletişim Hizmetleri A.Ş (\"Şirket\") ile hukuki olarak bağlayıcı bu Hizmet Sözleşmesi'ni (\"Sözleşme\") akdetmiş olur. Kişisel verilerinizin işlenmesi ile ilgili haklarınız, işlenmelere ve buna ilişkin istenen rızalarınıza dair bilgilendirilmeniz için Aday Aydınlatma Metni'ne bakabilirsiniz. Hizmetlerimizi kullanımınız, ayrıca  Çerez Politikamıza da tabidir.</p>",
-                                              allowOutsideClick: false,
-                                              confirmButtonText: "Tamam"
-                                          })
-                            }}
-                        >
-                          Hizmet Sözleşmesini
-                        </a>{" "}<span style={{cursor: "default"}}>onaylıyorum.</span>
-                      </span>
-                                {(values.isTerm ? "" :
-                                    <span
-                                        style={{cursor: "default"}}
-                                        className={"text-red-500 font-semibold mt-2 block"}>Sözleşme kabul edilmeli!</span>)}
-                            </div>
-
-                            <div className="text-center mt-4 mb-3">
-                                <button
-                                    className={isDisabled ? " bg-blueGray-700 text-blueGray-500 text-sm font-bold uppercase px-6 py-3 rounded shadow outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150 " : "bg-indigo-500 active:bg-indigo-500 hover:bg-purple-400 text-white text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"}
-                                    type="submit"
-                                    disabled={isDisabled ? true : false}
-                                >
-                                    Hesap Oluştur
-                                </button>
-                            </div>
-                        </Form>
-                    )
-
+                  });
                 }
-            </Formik>
-           
-        </div>
-    );
+              })
+              .catch((err) => {
+                console.log(err);
+              });
+          }
+        }}
+      >
+        {({
+          values,
+          errors,
+          touched,
+          handleSubmit,
+          handleReset,
+          handleChange,
+          isSubmitting,
+          dirty,
+        }) => (
+          <Form>
+            {
+              (isDisabled =
+                values.firstName === "" ||
+                values.lastName === "" ||
+                values.ídentityNumber === "" ||
+                values.identityNumber.length < 11 ||
+                values.birthDate === "" ||
+                values.email === "" ||
+                values.confirmPassword === "" ||
+                values.isTerm === false ||
+                values.password !== values.confirmPassword)
+            }
+            <div className="flex w-full">
+              <input
+                type="text"
+                className="border-0 px-3 py-3 placeholder-blueGray-600 font-semibold text-blueGray-600 mr-2 bg-white rounded text-sm shadow focus:outline-none focus:ring w-1/2 ease-linear transition-all duration-150"
+                placeholder="İsim"
+                id="firstName"
+                value={values.firstName}
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                className="border-0 px-3 py-3 placeholder-blueGray-600 font-semibold text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-1/2 ease-linear transition-all duration-150"
+                placeholder="Soyisim"
+                id="lastName"
+                value={values.lastName}
+                onChange={handleChange}
+              />
+            </div>
+            <div className={"w-full flex mb-2 mt-1"}>
+              {errors.firstName && touched.firstName ? (
+                <div className={"text-red-500 font-semibold w-1/2"}>
+                  {errors.firstName}
+                </div>
+              ) : null}
+              {errors.lastName && touched.lastName ? (
+                <div className={"text-red-500 font-semibold w-1/2 "}>
+                  {errors.lastName}
+                </div>
+              ) : null}
+            </div>
+            <div className="relative w-full mb-3">
+              <input
+                type="text"
+                className="border-0 px-3 py-3 placeholder-blueGray-600 font-semibold text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                placeholder="Tc kimlik numarası"
+                id="identityNumber"
+                maxLength={11}
+                value={values.identityNumber}
+                onChange={handleChange}
+              />
+              {values.identityNumber.length < 11 &&
+              values.identityNumber !== "" ? (
+                <span className={"block text-red-500 font-semibold mt-2"}>
+                  Gerçek bir kişi değil{" "}
+                </span>
+              ) : (
+                ""
+              )}
+            </div>
+            <div className="relative w-full mb-3">
+              <input
+                type="date"
+                className="border-0 px-3 py-3 placeholder-blueGray-600 font-semibold text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                placeholder="Doğum Tarihi"
+                id="birthDate"
+                value={values.birthDate}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="relative w-full mb-3">
+              <input
+                type="email"
+                className="border-0 px-3 py-3 placeholder-blueGray-600 font-semibold text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                placeholder="E-posta adresi"
+                id={"email"}
+                value={values.email}
+                onChange={handleChange}
+              />
+              {errors.email && touched.email ? (
+                <div className={"text-red-500 font-semibold mt-2"}>
+                  {errors.email}
+                </div>
+              ) : null}
+            </div>
+            <div className="relative w-full mb-3">
+              <input
+                type="password"
+                className="border-0 px-3 py-3 font-semibold placeholder-blueGray-600 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                placeholder="Şifre"
+                id="password"
+                maxLength={25}
+                value={values.password}
+                onChange={handleChange}
+              />
+              {errors.password && touched.password ? (
+                <div className={"text-red-500 font-semibold mt-2"}>
+                  {errors.password}
+                </div>
+              ) : null}
+            </div>
+            <div className="relative w-full mb-5">
+              <input
+                type="password"
+                className="border-0 px-3 py-3 placeholder-blueGray-600 font-semibold text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                placeholder="Şifre onay"
+                id="confirmPassword"
+                maxLength={25}
+                onChange={handleChange}
+                value={values.confirmPassword}
+              />
+              {values.password !== values.confirmPassword &&
+              values.confirmPassword !== "" ? (
+                <span className={"block text-red-500 font-semibold mt-2"}>
+                  Şifreler uyuşmuyor{" "}
+                </span>
+              ) : (
+                ""
+              )}
+              {errors.confirmPassword && touched.confirmPassword ? (
+                <div className={"text-red-500 font-semibold mt-2"}>
+                  {errors.confirmPassword}
+                </div>
+              ) : null}
+            </div>
+
+            <div>
+              <label className="items-center cursor-pointer">
+                <input
+                  type="checkbox"
+                  className="form-checkbox cursor-pointer border-0 rounded-full font-semibold text-lightBlue-500 ml-1 w-5 h-5 ease-linear transition-all duration-150"
+                  id="isTerm"
+                  onChange={handleChange}
+                  onClick={() => (values.isTerm = true)}
+                />
+              </label>
+              {errors.isTerm && touched.isTerm ? (
+                <div className={"text-red-500 mt-2"}>{errors.isTerm}</div>
+              ) : null}
+              <span className="ml-2 text-sm font-semibold font-semibold text-white">
+                <a
+                  className="text-lightBlue-500 cursor-pointer "
+                  onClick={(e) => {
+                    Swal.fire({
+                      title: "Hizmet Sözleşmesi",
+                      html: '<p style=\'font-weight: 600;font-size: 15px;margin-left: 2rem;margin-right: 2rem;font-family: Samsung Sans;\'>HÜKÜMLER SÖZLEŞME HAKKINDA Aday, "Üyeliği Tamamla" "Facebook ile Üye Ol" veya benzeri ifadeleri tıklayarak, kaydolarak, erişimde bulunarak veya hizmetlerimizi kullanarak, Kariyer.net Elektronik Yayıncılık ve İletişim Hizmetleri A.Ş ("Şirket") ile hukuki olarak bağlayıcı bu Hizmet Sözleşmesi\'ni ("Sözleşme") akdetmiş olur. Kişisel verilerinizin işlenmesi ile ilgili haklarınız, işlenmelere ve buna ilişkin istenen rızalarınıza dair bilgilendirilmeniz için Aday Aydınlatma Metni\'ne bakabilirsiniz. Hizmetlerimizi kullanımınız, ayrıca  Çerez Politikamıza da tabidir.</p>',
+                      allowOutsideClick: false,
+                      confirmButtonText: "Tamam",
+                    });
+                  }}
+                >
+                  Hizmet Sözleşmesini
+                </a>{" "}
+                <span style={{ cursor: "default" }}>onaylıyorum.</span>
+              </span>
+              {values.isTerm ? (
+                ""
+              ) : (
+                <span
+                  style={{ cursor: "default" }}
+                  className={"text-red-500 font-semibold mt-2 block"}
+                >
+                  Sözleşme kabul edilmeli!
+                </span>
+              )}
+            </div>
+
+            <div className="text-center mt-4 mb-3">
+              <button
+                className={
+                  isDisabled
+                    ? " bg-blueGray-700 text-blueGray-500 text-sm font-bold uppercase px-6 py-3 rounded shadow outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150 "
+                    : "bg-indigo-500 active:bg-indigo-500 hover:bg-purple-400 text-white text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+                }
+                type="submit"
+                disabled={isDisabled ? true : false}
+              >
+                Hesap Oluştur
+              </button>
+            </div>
+          </Form>
+        )}
+      </Formik>
+    </div>
+  );
 }
 
 export default JobseekerRegister;
