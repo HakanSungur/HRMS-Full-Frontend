@@ -32,7 +32,7 @@ export default function Footer() {
                             </h5>
                             <div className="mt-6 lg:mb-0 mb-6">
                                 
-                                <a href={"https://www.instagram.com/hakansungur06/"} target={"_blank"}>
+                                <a href={"https://www.instagram.com/hakansungur06/"} >
                                     <button
                                         className="bg-pink-500 text-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-4"
                                         type="button"
@@ -40,7 +40,7 @@ export default function Footer() {
                                         <i className="fab fa-instagram"></i>
                                     </button>
                                 </a>
-                                <a href={"https://www.linkedin.com/in/hakan-sungur/"} target={"_blank"}>
+                                <a href={"https://www.linkedin.com/in/hakan-sungur/"} >
                                     <button
                                         className="bg-red-500 text-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-4"
                                         type="button"
@@ -48,7 +48,7 @@ export default function Footer() {
                                         <i className="fab fa-linkedin"></i>
                                     </button>
                                 </a>
-                                <a href={"https://github.com/HakanSungur"} target={"_blank"}>
+                                <a href={"https://github.com/HakanSungur"} >
                                     <button
                                         className="bg-blueGray-800 text-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                                         type="button"
