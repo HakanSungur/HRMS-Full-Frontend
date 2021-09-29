@@ -15,13 +15,8 @@ export default function FooterSmall(props) {
                     <div className="flex flex-wrap items-center md:justify-between justify-center">
                         <div className="w-full md:w-4/12 px-4">
                             <div className="text-sm text-blueGray-400 font-semibold py-1 text-center md:text-left">
-                                Copyright © {new Date().getFullYear()} İnsan Kaynakları Yönetim Sistemi by{" "}
-                                <a
-                                    href="!#"
-                                    className="text-white hover:text-blueGray-300 text-sm font-semibold py-1"
-                                >
-                                    Hakan SUNGUR
-                                </a>
+                                Copyright © {new Date().getFullYear()} İnsan Kaynakları Yönetim Sistemi {" "}
+                               
                             </div>
                         </div>
                         <div className="w-full md:w-8/12 px-4">
@@ -35,12 +30,7 @@ export default function FooterSmall(props) {
                                     </a>
                                 </li>
                                 <li>
-                                    <a
-                                        href="!#"
-                                        className="text-white hover:text-blueGray-300 text-sm font-semibold block py-1 px-3"
-                                    >
-                                        Hakkımda
-                                    </a>
+                                   
                                 </li>
                             </ul>
                         </div>
