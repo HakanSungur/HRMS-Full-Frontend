@@ -251,7 +251,7 @@ function JobseekerRegister(props) {
                   onClick={(e) => {
                     Swal.fire({
                       title: "Hizmet Sözleşmesi",
-                      html: '<p style=\'font-weight: 600;font-size: 15px;margin-left: 2rem;margin-right: 2rem;font-family: Samsung Sans;\'>HÜKÜMLER SÖZLEŞME HAKKINDA Aday, "Üyeliği Tamamla" "Facebook ile Üye Ol" veya benzeri ifadeleri tıklayarak, kaydolarak, erişimde bulunarak veya hizmetlerimizi kullanarak, Kariyer.net Elektronik Yayıncılık ve İletişim Hizmetleri A.Ş ("Şirket") ile hukuki olarak bağlayıcı bu Hizmet Sözleşmesi\'ni ("Sözleşme") akdetmiş olur. Kişisel verilerinizin işlenmesi ile ilgili haklarınız, işlenmelere ve buna ilişkin istenen rızalarınıza dair bilgilendirilmeniz için Aday Aydınlatma Metni\'ne bakabilirsiniz. Hizmetlerimizi kullanımınız, ayrıca  Çerez Politikamıza da tabidir.</p>',
+                      html: '<p style=\'font-weight: 600;font-size: 15px;margin-left: 2rem;margin-right: 2rem;font-family: Samsung Sans;\'>HAZİNE VE MALİYE BAKANLIĞI İLGİLİ SÖZLEŞME</p>',
                       allowOutsideClick: false,
                       confirmButtonText: "Tamam",
                     });

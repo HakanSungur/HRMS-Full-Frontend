@@ -1,6 +1,7 @@
 const plugin = require("tailwindcss/plugin");
 const colors = require("tailwindcss/colors");
 
+
 module.exports = {
     purge: {
         enabled: true,
@@ -15,7 +16,7 @@ module.exports = {
     },
     theme: {
         colors: {
-            ...colors,
+            ...colors, 
         },
         extend: {
             minHeight: {
