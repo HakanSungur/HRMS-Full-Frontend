@@ -5,7 +5,7 @@ export default class SocialMediaService{
         return axios.get(`http://localhost:8080/api/socialmedias/getSocialMediaByCvId?cvId=${id}`)
     }
 
-    async addSocialMedia(sacialMedia){
+    async addSocialMedia(socialMedia){
         return await axios({
             method:"POST",
             url: `http://localhost:8080/api/socialmedias/addSocialMedia`,

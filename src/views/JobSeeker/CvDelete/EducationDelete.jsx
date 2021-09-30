@@ -40,7 +40,7 @@ export default function EducationDelete(props) {
                 setDepartment(res.data.data)
             }
         })
-        curriculaVitaeService.findCvByJobSeekerId(jobSeekerId).then((res) => {
+        cVService.findCvByJobSeekerId(jobSeekerId).then((res) => {
             if (isMounted) {
                 setCv(res.data.data)
             }

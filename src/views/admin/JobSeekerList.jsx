@@ -1,5 +1,5 @@
 import React from "react";
-import AdminJobseekerList from "../../components/Cards/AdminJobseekerList";
+import AdminJobseekerList from "../../components/Cards/AdminJobSeekerList";
 
 // components
 

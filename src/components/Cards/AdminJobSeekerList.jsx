@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import JobSeekerService from "../../services/JobSeekerService";
-import JobseekerDropdown from "../Dropdowns/JobseekerDropdown"
+import JobseekerDropdown from "../Dropdowns/JobSeekerDropdown"
 import PropTypes from "prop-types";
 
 export default function AdminJobseekerList(props) {

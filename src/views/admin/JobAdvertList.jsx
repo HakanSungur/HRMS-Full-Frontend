@@ -1,7 +1,7 @@
 import React from "react";
 
 // components
-import AdminJobAdvertList from "components/Cards/AdminJobAdvertList.js";
+import AdminJobAdvertList from "../../components/Cards/AdminJobAdvertList";
 
 export default function jobAdvertList() {
     return (

@@ -1,6 +1,6 @@
 import React from "react";
 
-import React from "react";
+
 
 export default function FooterAdmin() {
   return (
@@ -32,11 +32,11 @@ export default function FooterAdmin() {
                   </a>
                 </li>
                 <a
-                                        href="#"
-                                        className="text-blueGray-800 hover:text-lightBlue-600 text-sm font-semibold block py-1 px-3"
-                                    >
-                                        Hakkımda
-                                    </a>
+                  href="#"
+                  className="text-blueGray-800 hover:text-lightBlue-600 text-sm font-semibold block py-1 px-3"
+                >
+                  Hakkımda
+                </a>
               </ul>
             </div>
           </div>

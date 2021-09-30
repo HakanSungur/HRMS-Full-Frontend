@@ -13,7 +13,7 @@ export default function AddJobExperiences(props) {
 
     useEffect(() => {
         let isMounted = true
-        curriculaVitaeService.findCvByJobSeekerId(props.getJobExperiences()).then((res) => {
+        cVService.findCvByJobSeekerId(props.getJobExperiences()).then((res) => {
             if (isMounted) {
                 setCv(res.data.data)
             }

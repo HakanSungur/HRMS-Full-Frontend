@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 // components
-import EmployerDropdown from "/components/Dropdowns/EmployerDroıpdown.jsx";
+import EmployerDropdown from "../../components/Dropdowns/EmployerDropdown";
 import EmployerService from "../../services/EmployerService";
 
 export default function AdminEmployerList({ color }) {

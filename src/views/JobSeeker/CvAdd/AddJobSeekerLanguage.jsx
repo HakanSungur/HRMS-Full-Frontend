@@ -23,7 +23,7 @@ export default function AddJobSeekerLanguage(props) {
                 setLanguages(res.data.data)
             }
         })
-        curriculaVitaeService.findCvByJobSeekerId(props.getJobSeekerLanguages()).then((res) => {
+        cVService.findCvByJobSeekerId(props.getJobSeekerLanguages()).then((res) => {
             if (isMounted) {
                 setCv(res.data.data)
             }

@@ -2,14 +2,14 @@ import React from "react";
 import {Redirect, Route, Switch} from "react-router-dom";
 
 // components
-import AdminNavbar from "/components/Navbars/AdminNavbar.jsx";
-import Sidebar from "/components/Sidebar/Sidebar.jsx";
-import FooterAdmin from "/components/Footers/FooterAdmin.jsx";
+import AdminNavbar from "../components/Navbars/AdminNavbar.jsx";
+import Sidebar from "../components/Sidebar/Sidebar.jsx";
+import FooterAdmin from "../components/Footers/FooterAdmin";
 
 // views
-import EmployerList from "/views/admin/EmployerList.jsx";
-import jobAdvertList from "/views/admin/JobAdvertList.jsx";
-import jobseekerList from "../views/admin/JobseekerList";
+import EmployerList from "../views/admin/EmployerList";
+import jobAdvertList from "../views/admin/JobAdvertList.jsx";
+import jobseekerList from "../views/admin/JobSeekerList";
 import systemPersonelList from "../views/admin/SystemPersonelList";
 import AdminApproval from "../components/Cards/AdminApproval";
 

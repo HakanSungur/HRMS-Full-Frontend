@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import SocialMediService from "../../services/SocialMediaService";
 
-export default function UpdateSocialMedia(props) {
+function UpdateSocialMedia(props) {
   const socialMediaService = new SocialMediService();
+
   const [smId, setSmId] = useState([]);
+
   function getSocialMediaByCvId() {
-    return socialMediaService.getSocialMediaByCvId(props.getSocialMedias());
+    return socialMediaService.getSocialMediaByCurriculaVitaeId(
+      props.getSocialMedias()
+    );
   }
+
   useEffect(() => {
     let isMounted = true;
     getSocialMediaByCvId().then((res) => {
@@ -28,11 +33,12 @@ export default function UpdateSocialMedia(props) {
       props.getSocialMedias();
     });
   }
+
   return (
     <div>
       <span
         title={"Kullanıcı Adını Değiştir"}
-        className="bg-indigo-500 cursor-pointer px-2 text-blueGray-300 active:bg-indigo-500 hover:bg-purple-400 text-xs font-semibold capitalize px-1 rounded shadow outline-none focus:outline-none mr-1 ease-linear transition-all duration-250  "
+        className="bg-indigo-500 cursor-pointer px-2 text-blueGray-300 active:bg-indigo-500 hover:bg-purple-400 text-xs font-semibold capitalize px-1 rounded shadow outline-none focus:outline-none mr-1 ease-linear transition-all duration-250"
         onClick={async () => {
           try {
             const { value: githubUserName } = await Swal.fire({
@@ -116,7 +122,7 @@ export default function UpdateSocialMedia(props) {
               });
             }
           } catch (e) {
-            
+            // console.log(e)
             Swal.fire({
               icon: "error",
               title: "HATA",
@@ -131,3 +137,4 @@ export default function UpdateSocialMedia(props) {
     </div>
   );
 }
+export default UpdateSocialMedia;

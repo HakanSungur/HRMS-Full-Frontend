@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-import ProfileNavbar from "/components/Navbars/ProfileNavbar.jsx";
-import Footer from "/components/Footers/Footer.jsx";
+import ProfileNavbar from "../../components/Navbars/ProfileNavbar";
+import Footer from "../../components/Footers/Footer";
 import CVService from "../../services/CVService";
 import Swal from "sweetalert2";
 import EducationDelete from "./CvDelete/EducationDelete";
-import JobExperienceDelete from "./CVDelete/JobExperienceDelete";
+import JobExperienceDelete from "./CvDelete/JobExperienceDelete";
 import LanguageDelete from "./CvDelete/LanguageDelete";
 import AddEducation from "./CvAdd/AddAducation";
 import EducationService from "../../services/EducationService";
@@ -44,7 +44,7 @@ export default function JobSeekerProfile() {
   let jobSeekerId = 1; //burası login yapmış olan kullanıcıdan alınacak
 
   function findCvByJobSeekerId() {
-    return curriculaVitaeService.findCvByJobSeekerId(jobSeekerId);
+    return cVService.findCvByJobSeekerId(jobSeekerId);
   }
 
   useEffect(() => {
@@ -117,7 +117,7 @@ export default function JobSeekerProfile() {
   }
 
   function updateCv(cv) {
-    curriculaVitaeService.updateCv(cv).then(() => {
+    cVService.updateCv(cv).then(() => {
       findCvByJobSeekerId().then((res) => {
         setCv(res.data.data);
       });

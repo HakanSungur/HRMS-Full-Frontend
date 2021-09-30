@@ -23,7 +23,7 @@ export default function AdminSystemPersonelList(props) {
 
     useEffect(() => {
         let isMounted = true
-        systemPersonelService.getSystemPersonel().then(result => {
+        systemPersonelService.getSystemPersonels().then(result => {
             if (isMounted) setSystemPersonels(result.data.data)
         })
         systemPersonelService.getEmployerByUpdatedTrue().then((res) => {
@@ -43,7 +43,7 @@ export default function AdminSystemPersonelList(props) {
     }
 
     function getPersonels() {
-        systemPersonelService.getSystemPersonel().then((res) => {
+        systemPersonelService.getSystemPersonels().then((res) => {
             setSystemPersonels(res.data.data);
         })
     }

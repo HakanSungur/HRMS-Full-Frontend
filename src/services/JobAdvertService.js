@@ -29,7 +29,7 @@ export default class JobAdvertService{
         return axios.get(`http://localhost:8080/api/jobadverts/getJobAdvertByIsActiveTrueAndIsConfirmedTrueByPageDesc?pageNo=${pageNo}&pageSize=${pageSize}`)
     }
 
-    addJobAdvert(jobadvert){
+    addJobAdvert(jobAdvert){
         return axios({
             method:"POST",
             url:`http://localhost:8080/api/jobadverts/addJobadvert`,

@@ -7,6 +7,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 export default function SystemPersonelDropdown(props) {
+  const {open} = this.state;
   return (
     <Menu>
       {({}) => (
@@ -43,7 +44,7 @@ export default function SystemPersonelDropdown(props) {
                   {({ active }) => (
                     <a
                       href="#"
-                      className={className(
+                      className={classNames(
                         active ? "bg-emerald-500 text-white" : "text-white",
                         "block px4 py-3 text-sm"
                       )}

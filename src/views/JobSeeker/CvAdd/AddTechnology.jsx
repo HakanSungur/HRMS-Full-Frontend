@@ -13,7 +13,7 @@ export default function AddTechnology(props) {
 
     useEffect(() => {
         let isMounted = true
-        curriculaVitaeService.findCvByJobSeekerId(props.getTechnologies()).then((res) => {
+        cVService.findCvByJobSeekerId(props.getTechnologies()).then((res) => {
             if (isMounted) {
                 setCv(res.data.data)
             }

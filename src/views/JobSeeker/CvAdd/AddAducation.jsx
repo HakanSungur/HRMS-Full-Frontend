@@ -32,7 +32,7 @@ export default function AddEducation(props) {
                 setDepartment(res.data.data)
             }
         })
-        curriculaVitaeService.findCvByJobSeekerId(props.getEducations()).then((res) => {
+        cVService.findCvByJobSeekerId(props.getEducations()).then((res) => {
             if (isMounted) {
                 setCv(res.data.data)
             }

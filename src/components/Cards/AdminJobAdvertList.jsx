@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 // components
-import JobAdvertDropdown from "components/Dropdowns/jobAdvertDropdown.js";
+import JobAdvertDropdown from "../Dropdowns/JobAdvertDropdown";
 import JobAdvertService from "../../services/JobAdvertService";
 import EmployerService from "../../services/EmployerService";
 import SystemPersonelService from "../../services/SystemPersonelService";
