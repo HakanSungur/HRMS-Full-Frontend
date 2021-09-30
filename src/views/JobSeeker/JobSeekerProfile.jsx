@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
 
-import ProfileNavbar from "components/Navbars/ProfileNavbar.js";
-import Footer from "components/Footers/Footer.js";
+import ProfileNavbar from "/components/Navbars/ProfileNavbar.jsx";
+import Footer from "/components/Footers/Footer.jsx";
 import CVService from "../../services/CVService";
 import Swal from "sweetalert2";
-import EducationDelete from "./CVDelete/EducationDelete";
-import JobExperienceDelete from "./CurriculaVitaeDelete/JobExperienceDelete";
-import LanguageDelete from "./CurriculaVitaeDelete/LanguageDelete";
-import AddEducation from "./CurriculaVitaeAdd/AddEducation";
+import EducationDelete from "./CvDelete/EducationDelete";
+import JobExperienceDelete from "./CVDelete/JobExperienceDelete";
+import LanguageDelete from "./CvDelete/LanguageDelete";
+import AddEducation from "./CvAdd/AddAducation";
 import EducationService from "../../services/EducationService";
-import AddJobExperiences from "./CurriculaVitaeAdd/AddJobExperiences";
+import AddJobExperiences from "./CvAdd/AddJobExperience";
 import JobExperienceService from "../../services/JobExperienceService";
-import AddJobSeekerLanguage from "./CurriculaVitaeAdd/AddJobSeekerLanguage";
+import AddJobSeekerLanguage from "./CvAdd/AddJobSeekerLanguage";
 import JobSeekerLanguageService from "../../services/JobSeekerLanguageService";
-import AddTechnology from "./CurriculaVitaeAdd/AddTechnology";
+import AddTechnology from "./CvAdd/AddTechnology";
 import TechnologyService from "../../services/TechnologyService";
-import AddSocialMedia from "./CurriculaVitaeAdd/AddSocialMedia";
+import AddSocialMedia from "./CvAdd/AddSocialMedia";
 import UpdateSocialMedia from "../../components/Utility/UpdateSocialMedia";
 
 export default function JobSeekerProfile() {

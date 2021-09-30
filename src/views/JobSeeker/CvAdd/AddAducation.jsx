@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import SchoolService from "../../../services/SchoolService";
 import DepartmentService from "../../../services/DepartmentService";
 import EducationService from "../../../services/EducationService";
-import CurriculaVaiteService from "../../../services/CurriculaVaiteService";
+import CVService from "../../../services/CVService";
 import Swal from "sweetalert2";
 
 export default function AddEducation(props) {
@@ -16,7 +16,7 @@ export default function AddEducation(props) {
 
     const educationService = new EducationService();
 
-    const curriculaVitaeService = new CurriculaVaiteService();
+    const cVService = new CVService();
 
     const [cv, setCv] = useState([]);
 

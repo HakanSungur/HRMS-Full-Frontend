@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Swal from "sweetalert2";
 import CVService from "../../../services/CVService";
-import LangugageService from "../../../services/LangugageService";
+import LangugageService from "../../../services/LanguageService";
 import JobSeekerLanguageService from "../../../services/JobSeekerLanguageService";
 
 export default function AddJobSeekerLanguage(props) {
