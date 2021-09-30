@@ -1,6 +1,6 @@
 import React from "react";
 import Swal from "sweetalert2";
-import SocialMediService from "../../services/SocialMediService";
+import SocialMediService from "../../services/SocialMediaService";
 
 export default function UpdateSocialMedia(props) {
   const socialMediaService = new SocialMediService();
@@ -116,7 +116,7 @@ export default function UpdateSocialMedia(props) {
               });
             }
           } catch (e) {
-            // console.log(e)
+            
             Swal.fire({
               icon: "error",
               title: "HATA",
