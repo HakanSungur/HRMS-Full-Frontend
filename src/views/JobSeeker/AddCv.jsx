@@ -10,7 +10,7 @@ export default function AddCurriculaVitae(props) {
   let jobSeekerId = 42;
 
   function addCv(cv) {
-    return curriculaVitaeService.addCv(cv);
+    return cVService.addCv(cv);
   }
 
   return (

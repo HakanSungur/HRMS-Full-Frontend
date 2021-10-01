@@ -3,8 +3,8 @@ import {Link} from "react-router-dom";
 
 // components
 
-export default function Navbar(props) {
-    const [navbarOpen, setNavbarOpen] = React.useState(false);
+export default function AuthNavbar(props) {
+    //const [navbarOpen, setNavbarOpen] = React.useState(false);
     return (
         <>
             <nav
