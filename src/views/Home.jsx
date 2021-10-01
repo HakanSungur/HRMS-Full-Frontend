@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 
-import HomeNavbar from "components/Navbars/HomeNavbar.js";
-import Footer from "components/Footers/Footer.js";
+import HomeNavbar from "../components/Navbars/HomeNavbar";
+import Footer from "../components/Footers/Footer";
 import JobAdvertService from "../services/JobAdvertService";
 import HomeJobAdvertList from "../components/Cards/HomeJobAdvertList";
 import EmptyJobAdvertList from "../components/Cards/EmptyJobAdvertList";

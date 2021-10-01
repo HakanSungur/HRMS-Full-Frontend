@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function BackToBottom(props) {
-  function BackToBottom() {
+  function backToBottom() {
     window.scrollTo({
       left: 0,
       top: document.body.scrollHeight,
