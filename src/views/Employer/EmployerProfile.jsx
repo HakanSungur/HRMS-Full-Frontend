@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 // components
-import JobAdvertDropdown from "components/Dropdowns/jobAdvertDropdown.js";
+import JobAdvertDropdown from "../../components/Dropdowns/JobAdvertDropdown";
 import JobAdvertService from "../../services/JobAdvertService";
 import EmployerService from "../../services/EmployerService";
 import SystemPersonelService from "../../services/SystemPersonelService";
@@ -184,10 +184,7 @@ export default function EmployerProfile() {
                       }}
                     />
                   </div>
-                  {/*<div*/}
-                  {/*    className="w-full absolute lg:w-6/12 lg:order-3 lg:text-left lg:self-center">*/}
-                  {/*    <h2 className={"text text-4xl text-white"}>{employer.companyName}</h2>*/}
-                  {/*</div>*/}
+                  
                   <div
                     className="w-full absolute lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center"
                     style={{ marginLeft: "27em" }}
@@ -205,9 +202,9 @@ export default function EmployerProfile() {
                           className="bg-indigo-500 text-blueGray-300 active:bg-indigo-500 hover:bg-purple-400 text-sm font-bold uppercase px-6 py-2 rounded shadow mt-3 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-250"
                           onClick={async () => {
                             const { value: companyName } = await Swal.fire({
-                              title: "1/4 Şirket Adı",
+                              title: "1/4 İlan Veren Birim Adı",
                               input: "text",
-                              inputPlaceholder: "Şirket adı giriniz",
+                              inputPlaceholder: "İlan veren birim adı giriniz",
                               inputValue: employer.companyName,
                               showCancelButton: true,
                               cancelButtonText: "Vazgeç",
