@@ -160,12 +160,12 @@ export default function AddCurriculaVitae(props) {
                   <div className="flex mx-auto" style={{ width: "30%" }}>
                     <button
                       className={
-                        values.coverLetter == ""
+                        values.coverLetter === ""
                           ? "bg-blueGray-700 text-blueGray-500 text-sm font-bold uppercase px-12 w-full py-3 rounded shadow mt-3 outline-none focus:outline-none mr-1 ease-linear transition-all duration-150"
                           : "bg-indigo-500 text-white active:bg-indigo-500 hover:bg-purple-400 text-sm font-bold uppercase px-12 w-full py-3 rounded shadow mt-3 outline-none focus:outline-none mr-1 ease-linear transition-all duration-150"
                       }
                       type="submit"
-                      disabled={values.coverLetter == "" ? true : false}
+                      disabled={values.coverLetter === "" ? true : false}
                     >
                       Oluştur
                     </button>

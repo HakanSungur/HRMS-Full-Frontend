@@ -8,10 +8,14 @@ import JobSeekerProfile from "./views/JobSeeker/JobSeekerProfile";
 import EmployerProfile from "./views/Employer/EmployerProfile";
 import AddCv from "./views/JobSeeker/AddCv";
 import Home from "./views/Home";
+import {Provider} from "react-redux";
+import {configureStore} from "./store/configureStore";
 
 
 function App() {
+  const store = configureStore()
   return (
+    <Provider store={store}>
     <BrowserRouter>
       <Switch>
         <Route path="/admin" component={Admin} />
@@ -25,6 +29,7 @@ function App() {
         <Redirect from="*" to="/" />
       </Switch>
     </BrowserRouter>
+    </Provider>
   );
 }
 

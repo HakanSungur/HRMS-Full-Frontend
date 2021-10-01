@@ -28,7 +28,7 @@ export default function AddJobAdvert(props) {
 
             inputValidator: (value) => {
               return new Promise((resolve) => {
-                if (value != "") {
+                if (value !== "") {
                   resolve();
                 } else {
                   resolve("Bu alan boş bırakılamaz!");
@@ -77,7 +77,7 @@ export default function AddJobAdvert(props) {
                 },
                 inputValidator: (value) => {
                   return new Promise((resolve) => {
-                    if (value != "" && value.length >= 6) {
+                    if (value !== "" && value.length >= 6) {
                       resolve();
                     } else {
                       resolve("Şifre 6 karakterden kısa olamaz!");

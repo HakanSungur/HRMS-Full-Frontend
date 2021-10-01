@@ -65,7 +65,7 @@ export default function AdminApproval(props) {
 
   return (
     <div>
-      {updatedEmployers != "" ? (
+      {updatedEmployers !== "" ? (
         <div>
           <h3 className="text-4xl mb-2 mt-20 font-semibold leading-normal text-blueGray-600  text-center">
             <i className="fas fa-building"></i> Güncelleme Onayı Bekleyen
@@ -106,7 +106,7 @@ export default function AdminApproval(props) {
                   {updatedEmployers.map((employers, index) => (
                     <tr
                       className={
-                        index % 2 == 0
+                        index % 2 === 0
                           ? "bg-blueGray-600 hover:bg-purple-250 font-semibold"
                           : "bg-blueGray-800 hover:bg-indigo-250 font-semibold"
                       }
@@ -124,7 +124,7 @@ export default function AdminApproval(props) {
                           onClick={() => {
                             swal(
                               <div className={"text-left text-lg"}>
-                                {employers.companyName !=
+                                {employers.companyName !==
                                 employer.companyName ? (
                                   <h1>
                                     {employers.companyName}{" "}
@@ -147,7 +147,7 @@ export default function AdminApproval(props) {
                                     </span>
                                   </h1>
                                 )}
-                                {employers.phoneNumber !=
+                                {employers.phoneNumber !==
                                 employer.phoneNumber ? (
                                   <h1 className={"mt-2"}>
                                     {employers.phoneNumber}{" "}
@@ -169,7 +169,7 @@ export default function AdminApproval(props) {
                                     </span>
                                   </h1>
                                 )}
-                                {employers.website != employer.website ? (
+                                {employers.website !== employer.website ? (
                                   <h1 className={"mt-2"}>
                                     {employers.website}{" "}
                                     <i className={"fas fa-arrow-right"}> </i>{" "}
@@ -191,7 +191,7 @@ export default function AdminApproval(props) {
                                     </span>
                                   </h1>
                                 )}
-                                {employers.email != employer.email ? (
+                                {employers.email !== employer.email ? (
                                   <h1 className={"mt-2"}>
                                     {employers.email}{" "}
                                     <i className={"fas fa-arrow-right"}> </i>{" "}
@@ -236,7 +236,7 @@ export default function AdminApproval(props) {
                               allowOutsideClick: false,
                             }).then((result) => {
                               // console.log(employer)
-                              
+
                               if (result.isConfirmed) {
                                 updateEmployer();
                                 const Toast = Swal.mixin({
@@ -341,7 +341,6 @@ export default function AdminApproval(props) {
         </div>
       ) : (
         <div className={"mx-auto w-1/2"}>
-          
           <img src={logo} />
           <h1
             className="text-4xl font-semibold leading-normal text-blueGray-800 text-center"

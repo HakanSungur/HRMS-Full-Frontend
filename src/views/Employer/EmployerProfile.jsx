@@ -58,8 +58,7 @@ export default function EmployerProfile() {
     jobAdvertService.deleteJobAdvertById(id).then(() => {
       getJobAdverts();
     });
-    // const filteredJobAdverts = jobAdverts.filter((jobAdvert) => jobAdvert.id != id)
-    // setJobAdverts(filteredJobAdverts)
+    
   }
 
   function getJobAdverts() {
@@ -216,7 +215,7 @@ export default function EmployerProfile() {
 
                               inputValidator: (value) => {
                                 return new Promise((resolve) => {
-                                  if (value != "") {
+                                  if (value !== "") {
                                     resolve();
                                   } else {
                                     resolve("Bu alan boş bırakılamaz!");
@@ -267,7 +266,7 @@ export default function EmployerProfile() {
                                   },
                                   inputValidator: (value) => {
                                     return new Promise((resolve) => {
-                                      if (value != "" && isURL(value)) {
+                                      if (value !== "" && isURL(value)) {
                                         resolve();
                                       } else {
                                         resolve("Website formatınız yanlış!!");
@@ -319,12 +318,12 @@ export default function EmployerProfile() {
                                       password: employer.password,
                                     };
                                     if (
-                                      empl.companyName !=
+                                      empl.companyName !==
                                         employer.companyName ||
-                                      empl.email != employer.email ||
-                                      empl.phoneNumber !=
+                                      empl.email !== employer.email ||
+                                      empl.phoneNumber !==
                                         employer.phoneNumber ||
-                                      empl.website != employer.website
+                                      empl.website !== employer.website
                                     ) {
                                       setUpdatedEmployerInformation(empl);
                                       updateEmployer(empl);

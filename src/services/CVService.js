@@ -3,8 +3,8 @@ import axios from "axios";
 
 export default class CVService{
 
-   findCvByJobSeekerId(jobSekeerId){
-       return axios.get('http://localhost:8080/api/cvs/getCvWithJobSeekerId?jobseekerId=${jobSeekerId}');
+   findCvByJobSeekerId(jobSeekerId){
+       return axios.get(`http://localhost:8080/api/cvs/getCvWithJobSeekerId?jobseekerId=${jobSeekerId}`);
    }
 
    async addCv(cv){
