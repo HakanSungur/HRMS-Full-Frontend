@@ -359,7 +359,7 @@ export default function JobSeekerProfile() {
                                   confirmButtonText: "Kaydet",
                                   inputValidator: (value) => {
                                     return new Promise((resolve) => {
-                                      if (value != "") {
+                                      if (value !== "") {
                                         resolve();
                                       } else {
                                         resolve("Bu alan boş bırakılamaz!");
@@ -485,10 +485,10 @@ export default function JobSeekerProfile() {
                               Bitiş Tarihi
                             </label>
                             <input
-                              type={education.endDate == null ? "text" : "date"}
+                              type={education.endDate === null ? "text" : "date"}
                               className="border-0 px-3 py-2 placeholder-blueGray-600 text-blueGray-600 bg-white rounded text-sm font-semibold shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                               defaultValue={
-                                education.endDate == null
+                                education.endDate === null
                                   ? "Henüz mezun olmadı"
                                   : education.endDate
                               }
