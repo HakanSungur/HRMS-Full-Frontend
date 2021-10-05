@@ -1,8 +1,8 @@
 {
   "cities": {
-    "getcities":  [
+    "getcities": [
       {
-        "id": 2,
+        "id": 3,
         "cityName": "İstanbul"
       }
     ]
