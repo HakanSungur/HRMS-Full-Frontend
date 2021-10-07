@@ -371,7 +371,7 @@
       "id": 4,
       "schoolName": "Anadolu Üniversitesi"
     }
-  ], 
+  ],
   "socialmedias": [
     {
       "id": 1,
@@ -393,12 +393,50 @@
       "githubUrl": "https://github.com/HakanSungur",
       "linkedinUrl": "https://www.linkedin.com/in/hakan-sungur/"
     }
-  ], 
+  ],
   "systempersonels": [
     {
-      
       "userName": "Hakan SUNGUR"
     }
-    
-  ], 
+  ],
+  "technologies": [
+    {
+      "id": 1,
+      "technologyName": "java"
+    },
+    {
+      "id": 2,
+      "technologyName": "C#"
+    },
+    {
+      "id": 3,
+      "technologyName": "javascript"
+    },
+    {
+      "id": 4,
+      "technologyName": "react"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "hakansungur@gmail.com",
+      "password":"123456"
+    },
+    {
+      "id": 2,
+      "email": "emnsungur@gmail.com",
+      "password":"123456"
+    },
+    {
+      "id": 3,
+      "email": "haknsungur@gmail.com",
+      "password":"123456"
+    },
+    {
+      "id": 4,
+      "email": "sungur@gmail.com",
+      "password":"123456"
+    }
+  ]
 }
