@@ -1,44 +1,44 @@
 {
   "cities": [
     {
-      "id":1,
-      "cityName":"İstanbul"
+      "id": 1,
+      "cityName": "İstanbul"
     },
     {
-      "id":2,
-      "cityName":"Ankara"
+      "id": 2,
+      "cityName": "Ankara"
     },
     {
-      "id":3,
-      "cityName":"İzmir"
+      "id": 3,
+      "cityName": "İzmir"
     },
     {
-      "id":4,
-      "cityName":"Kayseri"
+      "id": 4,
+      "cityName": "Kayseri"
     },
     {
-      "id":5,
-      "cityName":"Yozgat"
+      "id": 5,
+      "cityName": "Yozgat"
     },
     {
-      "id":6,
-      "cityName":"Sivas"
+      "id": 6,
+      "cityName": "Sivas"
     },
     {
-      "id":7,
-      "cityName":"Malatya"
+      "id": 7,
+      "cityName": "Malatya"
     },
     {
-      "id":8,
-      "cityName":"Erzurum"
+      "id": 8,
+      "cityName": "Erzurum"
     },
     {
-      "id":9,
-      "cityName":"Kırşehir"
+      "id": 9,
+      "cityName": "Kırşehir"
     },
     {
-      "id":10,
-      "cityName":"Adana"
+      "id": 10,
+      "cityName": "Adana"
     }
   ],
 
@@ -171,25 +171,81 @@
   "jobadverts": [
     {
       "id": 1,
-      "description":"Örnek Açıklama1",
-      "salary":17500,
+      "description": "Örnek Açıklama1",
+      "salary": 17500,
       "positionCount": 15,
       "deadLine": "01/01/2023",
-      "airDate":"01/01/2021",
-      "upTime":"01/01/2021",
-      "typeOfEmployment":"Kamu Kurumu (Bakanlık)",
-      "isActive":"true",
-      "isConfirmed":"true"
-
+      "airDate": "01/01/2021",
+      "upTime": "01/01/2021",
+      "typeOfEmployment": "Kamu Kurumu (Bakanlık)",
+      "isActive": "true",
+      "isConfirmed": "true"
     },
     {
-      "id": 2
+      "id": 2,
+      "description": "Örnek Açıklama1",
+      "salary": 17500,
+      "positionCount": 15,
+      "deadLine": "01/01/2023",
+      "airDate": "01/01/2021",
+      "upTime": "01/01/2021",
+      "typeOfEmployment": "Kamu Kurumu (Bakanlık)",
+      "isActive": "true",
+      "isConfirmed": "true"
     },
     {
-      "id": 3
+      "id": 3,
+      "description": "Örnek Açıklama1",
+      "salary": 17500,
+      "positionCount": 15,
+      "deadLine": "01/01/2023",
+      "airDate": "01/01/2021",
+      "upTime": "01/01/2021",
+      "typeOfEmployment": "Kamu Kurumu (Bakanlık)",
+      "isActive": "true",
+      "isConfirmed": "true"
     },
     {
-      "id": 4
+      "id": 4,
+      "description": "Örnek Açıklama1",
+      "salary": 17500,
+      "positionCount": 15,
+      "deadLine": "01/01/2023",
+      "airDate": "01/01/2021",
+      "upTime": "01/01/2021",
+      "typeOfEmployment": "Kamu Kurumu (Bakanlık)",
+      "isActive": "true",
+      "isConfirmed": "true"
+    }
+  ],
+  "jobexperiences": [
+    {
+      "id": 1,
+      "companyName":"... Bilgi Teknolojileri A.Ş.",
+      "PositionName": "Kıdemli Yazılım Mühendisi",
+      "startDate":"01/01/2000",
+      "endDate":"01/01/2001"
+    },
+    {
+      "id": 2,
+      "companyName":"... Bilgi Teknolojileri A.Ş.",
+      "PositionName": "Kıdemli Yazılım Mühendisi",
+      "startDate":"01/01/2000",
+      "endDate":"01/01/2001"
+    },
+    {
+      "id": 3,
+      "companyName":"... Bilgi Teknolojileri A.Ş.",
+      "PositionName": "Kıdemli Yazılım Mühendisi",
+      "startDate":"01/01/2000",
+      "endDate":"01/01/2001"
+    },
+    {
+      "id": 4,
+      "companyName":"... Bilgi Teknolojileri A.Ş.",
+      "PositionName": "Kıdemli Yazılım Mühendisi",
+      "startDate":"01/01/2000",
+      "endDate":"01/01/2001"
     }
   ]
 }
