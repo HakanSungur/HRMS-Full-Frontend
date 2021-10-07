@@ -69,7 +69,7 @@ export default function AdminApproval(props) {
         <div>
           <h3 className="text-4xl mb-2 mt-20 font-semibold leading-normal text-blueGray-600  text-center">
             <i className="fas fa-building"></i> Güncelleme Onayı Bekleyen
-            Şirketler
+            Birimler
           </h3>
           <div
             className={
@@ -86,7 +86,7 @@ export default function AdminApproval(props) {
                         "px-6 align-middle border border-indigo-400 py-3 text-sm uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
                       }
                     >
-                      Şirket Adı
+                      Birim Adı
                     </th>
                     <th
                       className={

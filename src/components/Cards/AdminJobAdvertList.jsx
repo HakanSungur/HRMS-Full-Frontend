@@ -86,7 +86,7 @@ export default function AdminJobAdvertList() {
                     "px-4 align-middle border border-indigo-400 py-3 text-sm uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left "
                   }
                 >
-                  Şirket
+                  İlan Veren Kurum
                 </th>
                 <th
                   className={
