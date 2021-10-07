@@ -23,6 +23,22 @@
     {
       "id":6,
       "cityName":"Sivas"
+    },
+    {
+      "id":7,
+      "cityName":"Malatya"
+    },
+    {
+      "id":8,
+      "cityName":"Erzurum"
+    },
+    {
+      "id":9,
+      "cityName":"Kırşehir"
+    },
+    {
+      "id":10,
+      "cityName":"Adana"
     }
   ],
 
@@ -30,6 +46,16 @@
     {
       "id": 1,
       "coverLetter": "Tanıtım Metni",
+      "pictureUrl": "https://avatars.githubusercontent.com/u/78656630?v=4"
+    },
+    {
+      "id": 2,
+      "coverLetter": "Tanıtım Metni2",
+      "pictureUrl": "https://avatars.githubusercontent.com/u/78656630?v=4"
+    },
+    {
+      "id": 3,
+      "coverLetter": "Tanıtım Metni3",
       "pictureUrl": "https://avatars.githubusercontent.com/u/78656630?v=4"
     }
   ],
