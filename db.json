@@ -1,12 +1,30 @@
 {
-  "cities": {
-    "getcities":  [
-      {
-        "id": 2,
-        "cityName": "İstanbul"
-      }
-    ]
-  },
+  "cities": [
+    {
+      "id":1,
+      "cityName":"İstanbul"
+    },
+    {
+      "id":2,
+      "cityName":"Ankara"
+    },
+    {
+      "id":3,
+      "cityName":"İzmir"
+    },
+    {
+      "id":4,
+      "cityName":"Kayseri"
+    },
+    {
+      "id":5,
+      "cityName":"Yozgat"
+    },
+    {
+      "id":6,
+      "cityName":"Sivas"
+    }
+  ],
 
   "cvs": [
     {
