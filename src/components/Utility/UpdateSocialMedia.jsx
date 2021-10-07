@@ -41,7 +41,7 @@ function UpdateSocialMedia(props) {
         className="bg-indigo-500 cursor-pointer px-2 text-blueGray-300 active:bg-indigo-500 hover:bg-purple-400 text-xs font-semibold capitalize px-1 rounded shadow outline-none focus:outline-none mr-1 ease-linear transition-all duration-250"
         onClick={async () => {
           try {
-            const { value: githubUserName } = await Swal.fire({
+            const { value: githubLink} = await Swal.fire({
               title: "1/2 Github Linki",
               input: "text",
               inputPlaceholder: "Github linki giriniz",
@@ -89,12 +89,12 @@ function UpdateSocialMedia(props) {
                   });
                 },
               });
-              if (linkedinUserName) {
+              if (linkedinLink) {
                 let socialMedia = {
-                  curriculaVitaeId: props.getSocialMedias(),
-                  githubUsername: githubLink,
+                  cVId: props.getSocialMedias(),
+                  githubLink: githubLink,
                   id: smId.id,
-                  linkedinUsername: linkedinUserName,
+                  linkedinLink: linkedinLink,
                 };
                 updateSocialMedia(socialMedia);
                 Swal.fire({

@@ -41,7 +41,7 @@ export default function AddSocialMedia(props) {
               },
             });
 
-            if (githubUserName) {
+            if (githubLink) {
               const { value: linkedinLink } = await Swal.fire({
                 title: "Linkedin Linki",
                 input: "text",
