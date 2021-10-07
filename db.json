@@ -168,6 +168,44 @@
       "id": 4
     }
   ],
+  "employers": [
+    {
+      "id": 1,
+      "companyName": "İlgili birim adı ",
+      "website": "www.hmb.gov.tr",
+      "phoneNumber": "03124152900",
+      "email": "admin@hmb.gov.tr",
+      "password": "123456",
+      "pictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/T%C3%BCrkiye_Cumhuriyeti_Hazine_ve_Maliye_Bakanl%C4%B1%C4%9F%C4%B1_Logo.svg/1200px-T%C3%BCrkiye_Cumhuriyeti_Hazine_ve_Maliye_Bakanl%C4%B1%C4%9F%C4%B1_Logo.svg.png"
+    },
+    {
+      "id": 2,
+      "companyName": "İlgili birim adı 2 ",
+      "website": "www.hmb.gov.tr",
+      "phoneNumber": "03124152900",
+      "email": "admin@hmb.gov.tr",
+      "password": "123456",
+      "pictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/T%C3%BCrkiye_Cumhuriyeti_Hazine_ve_Maliye_Bakanl%C4%B1%C4%9F%C4%B1_Logo.svg/1200px-T%C3%BCrkiye_Cumhuriyeti_Hazine_ve_Maliye_Bakanl%C4%B1%C4%9F%C4%B1_Logo.svg.png"
+    },
+    {
+      "id": 3,
+      "companyName": "İlgili birim adı 2 ",
+      "website": "www.hmb.gov.tr",
+      "phoneNumber": "03124152900",
+      "email": "admin@hmb.gov.tr",
+      "password": "123456",
+      "pictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/T%C3%BCrkiye_Cumhuriyeti_Hazine_ve_Maliye_Bakanl%C4%B1%C4%9F%C4%B1_Logo.svg/1200px-T%C3%BCrkiye_Cumhuriyeti_Hazine_ve_Maliye_Bakanl%C4%B1%C4%9F%C4%B1_Logo.svg.png"
+    },
+    {
+      "id": 4,
+      "companyName": "İlgili birim adı 2 ",
+      "website": "www.hmb.gov.tr",
+      "phoneNumber": "03124152900",
+      "email": "admin@hmb.gov.tr",
+      "password": "123456",
+      "pictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/T%C3%BCrkiye_Cumhuriyeti_Hazine_ve_Maliye_Bakanl%C4%B1%C4%9F%C4%B1_Logo.svg/1200px-T%C3%BCrkiye_Cumhuriyeti_Hazine_ve_Maliye_Bakanl%C4%B1%C4%9F%C4%B1_Logo.svg.png"
+    }
+  ],
   "jobadverts": [
     {
       "id": 1,

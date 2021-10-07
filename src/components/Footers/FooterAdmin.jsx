@@ -1,7 +1,5 @@
 import React from "react";
 
-
-
 export default function FooterAdmin() {
   return (
     <>
@@ -12,13 +10,7 @@ export default function FooterAdmin() {
             <div className="w-full md:w-4/12 px-4">
               <div className="text-sm text-blueGray-500 font-semibold py-1 text-center md:text-left">
                 Copyright © {new Date().getFullYear()} İnsan Kaynakları Yönetim
-                Sistemi by{" "}
-                <a
-                  href="#"
-                  className="text-blueGray-800 hover:text-lightBlue-600 text-sm font-semibold py-1"
-                >
-                  Hakan SUNGUR
-                </a>
+                Sistemi
               </div>
             </div>
             <div className="w-full md:w-8/12 px-4">
