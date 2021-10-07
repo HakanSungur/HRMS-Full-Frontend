@@ -221,49 +221,184 @@
   "jobexperiences": [
     {
       "id": 1,
-      "companyName":"... Bilgi Teknolojileri A.Ş.",
+      "companyName": "... Bilgi Teknolojileri A.Ş.",
       "PositionName": "Kıdemli Yazılım Mühendisi",
-      "startDate":"01/01/2000",
-      "endDate":"01/01/2001"
+      "startDate": "01/01/2000",
+      "endDate": "01/01/2001"
     },
     {
       "id": 2,
-      "companyName":"... Bilgi Teknolojileri A.Ş.",
+      "companyName": "... Bilgi Teknolojileri A.Ş.",
       "PositionName": "Kıdemli Bilgisayar Mühendisi",
-      "startDate":"01/01/2000",
-      "endDate":"01/01/2001"
+      "startDate": "01/01/2000",
+      "endDate": "01/01/2001"
     },
     {
       "id": 3,
-      "companyName":"... Bilgi Teknolojileri A.Ş.",
+      "companyName": "... Bilgi Teknolojileri A.Ş.",
       "PositionName": "Kıdemli Proje Yöneticisi",
-      "startDate":"01/01/2000",
-      "endDate":"01/01/2001"
+      "startDate": "01/01/2000",
+      "endDate": "01/01/2001"
     },
     {
       "id": 4,
-      "companyName":"... Bilgi Teknolojileri A.Ş.",
+      "companyName": "... Bilgi Teknolojileri A.Ş.",
       "PositionName": "Kıdemli Yazılım Mühendisi",
-      "startDate":"01/01/2000",
-      "endDate":"01/01/2001"
+      "startDate": "01/01/2000",
+      "endDate": "01/01/2001"
     }
   ],
   "jobpositions": [
     {
       "id": 1,
-      "jobTitle":"Kıdemli Yazılım Mühendisi"
+      "jobTitle": "Kıdemli Yazılım Mühendisi"
     },
     {
       "id": 2,
-      "jobTitle":"Kıdemli Yazılım Mühendisi"
+      "jobTitle": "Kıdemli Yazılım Mühendisi"
     },
     {
       "id": 3,
-      "jobTitle":"Kıdemli Bilgisayar Mühendisi"
+      "jobTitle": "Kıdemli Bilgisayar Mühendisi"
     },
     {
       "id": 4,
-      "jobTitle":"Kıdemli Proje Yöneticisi Mühendisi"
+      "jobTitle": "Kıdemli Proje Yöneticisi Mühendisi"
     }
-  ]
+  ],
+  "jobseekers": [
+    {
+      "firstName": "Hakan",
+      "lastName": "SUNGUR",
+      "identityNumber": "12345678901",
+      "birthDate": "01/01/1986"
+    },
+    {
+      "firstName": "Emre",
+      "lastName": "SÜMBÜL",
+      "identityNumber": "12345678911",
+      "birthDate": "01/01/1986"
+    },
+    {
+      "firstName": "Tuğçe",
+      "lastName": "BELKIZ",
+      "identityNumber": "12345678902",
+      "birthDate": "01/01/1986"
+    },
+    {
+      "firstName": "Hasan",
+      "lastName": "DOĞAN",
+      "identityNumber": "12345678903",
+      "birthDate": "01/01/1986"
+    }
+  ],
+  "jobseekeractivations": [
+    {
+      "id": 1,
+      "jobSeekerId": 1,
+      "isEmailConfirmed": "true",
+      "isMernisValid": "true"
+    },
+    {
+      "id": 2,
+      "jobSeekerId": 2,
+      "isEmailConfirmed": "true",
+      "isMernisValid": "true"
+    },
+    {
+      "id": 3,
+      "jobSeekerId": 3,
+      "isEmailConfirmed": "false",
+      "isMernisValid": "true"
+    },
+    {
+      "id": 4,
+      "jobSeekerId": 4,
+      "isEmailConfirmed": "true",
+      "isMernisValid": "false"
+    }
+  ],
+  "jobseekerlanguages": [
+    {
+      "id": 1,
+      "languageDegree": 5
+    },
+    {
+      "id": 2,
+      "languageDegree": 4
+    },
+    {
+      "id": 3,
+      "languageDegree": 3
+    },
+    {
+      "id": 4,
+      "languageDegree": 2
+    }
+  ],
+  "languages": [
+    {
+      "id": 1,
+      "languageName": "İngilizce"
+    },
+    {
+      "id": 2,
+      "languageName": "İngilizce"
+    },
+    {
+      "id": 3,
+      "languageName": "İngilizce"
+    },
+    {
+      "id": 4,
+      "languageName": "İngilizce"
+    }
+  ],
+  "schools": [
+    {
+      "id": 1,
+      "schoolName": "Anadolu Üniversitesi"
+    },
+    {
+      "id": 2,
+      "schoolName": "Anadolu Üniversitesi"
+    },
+    {
+      "id": 3,
+      "schoolName": "Anadolu Üniversitesi"
+    },
+    {
+      "id": 4,
+      "schoolName": "Anadolu Üniversitesi"
+    }
+  ], 
+  "socialmedias": [
+    {
+      "id": 1,
+      "githubUrl": "https://github.com/HakanSungur",
+      "linkedinUrl": "https://www.linkedin.com/in/hakan-sungur/"
+    },
+    {
+      "id": 2,
+      "githubUrl": "https://github.com/HakanSungur",
+      "linkedinUrl": "https://www.linkedin.com/in/hakan-sungur/"
+    },
+    {
+      "id": 3,
+      "githubUrl": "https://github.com/HakanSungur",
+      "linkedinUrl": "https://www.linkedin.com/in/hakan-sungur/"
+    },
+    {
+      "id": 4,
+      "githubUrl": "https://github.com/HakanSungur",
+      "linkedinUrl": "https://www.linkedin.com/in/hakan-sungur/"
+    }
+  ], 
+  "systempersonels": [
+    {
+      
+      "userName": "Hakan SUNGUR"
+    }
+    
+  ], 
 }
