@@ -167,5 +167,29 @@
     {
       "id": 4
     }
+  ],
+  "jobadverts": [
+    {
+      "id": 1,
+      "description":"Örnek Açıklama1",
+      "salary":17500,
+      "positionCount": 15,
+      "deadLine": "01/01/2023",
+      "airDate":"01/01/2021",
+      "upTime":"01/01/2021",
+      "typeOfEmployment":"Kamu Kurumu (Bakanlık)",
+      "isActive":"true",
+      "isConfirmed":"true"
+
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    }
   ]
 }
