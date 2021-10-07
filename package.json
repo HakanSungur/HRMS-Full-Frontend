@@ -49,7 +49,7 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "api": "npx json-server db.json --routes routes.json --no-cors=false"
+    "api": "npx json-server db.json --routes routes.json --port 8080 --no-cors=false"
   },
   "eslintConfig": {
     "extends": [
