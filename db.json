@@ -183,7 +183,7 @@
     },
     {
       "id": 2,
-      "description": "Örnek Açıklama1",
+      "description": "Örnek Açıklama2",
       "salary": 17500,
       "positionCount": 15,
       "deadLine": "01/01/2023",
@@ -195,7 +195,7 @@
     },
     {
       "id": 3,
-      "description": "Örnek Açıklama1",
+      "description": "Örnek Açıklama3",
       "salary": 17500,
       "positionCount": 15,
       "deadLine": "01/01/2023",
@@ -207,7 +207,7 @@
     },
     {
       "id": 4,
-      "description": "Örnek Açıklama1",
+      "description": "Örnek Açıklama4",
       "salary": 17500,
       "positionCount": 15,
       "deadLine": "01/01/2023",
@@ -229,14 +229,14 @@
     {
       "id": 2,
       "companyName":"... Bilgi Teknolojileri A.Ş.",
-      "PositionName": "Kıdemli Yazılım Mühendisi",
+      "PositionName": "Kıdemli Bilgisayar Mühendisi",
       "startDate":"01/01/2000",
       "endDate":"01/01/2001"
     },
     {
       "id": 3,
       "companyName":"... Bilgi Teknolojileri A.Ş.",
-      "PositionName": "Kıdemli Yazılım Mühendisi",
+      "PositionName": "Kıdemli Proje Yöneticisi",
       "startDate":"01/01/2000",
       "endDate":"01/01/2001"
     },
@@ -246,6 +246,20 @@
       "PositionName": "Kıdemli Yazılım Mühendisi",
       "startDate":"01/01/2000",
       "endDate":"01/01/2001"
+    }
+  ],
+  "positions": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
     }
   ]
 }
