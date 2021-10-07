@@ -248,18 +248,22 @@
       "endDate":"01/01/2001"
     }
   ],
-  "positions": [
+  "jobpositions": [
     {
-      "id": 1
+      "id": 1,
+      "jobTitle":"Kıdemli Yazılım Mühendisi"
     },
     {
-      "id": 2
+      "id": 2,
+      "jobTitle":"Kıdemli Yazılım Mühendisi"
     },
     {
-      "id": 3
+      "id": 3,
+      "jobTitle":"Kıdemli Bilgisayar Mühendisi"
     },
     {
-      "id": 4
+      "id": 4,
+      "jobTitle":"Kıdemli Proje Yöneticisi Mühendisi"
     }
   ]
 }
