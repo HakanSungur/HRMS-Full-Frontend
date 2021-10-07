@@ -1,3 +1,14 @@
 {
-  "/api/cities/getcities": "/cities"
+  "/api/cities/getCities": "/cities",
+  "/api/departments/getDepartments": "/departments",
+  "/api/educations/getEducations": "/educations",
+  "/api/employers/getEmployers": "/employers",
+  "/api/favorites/getFavorites": "/favorites",
+  "/api/jobadverts/getJobadverts": "/jobadverts",
+  "/api/jobpositions/getJobPositions": "/jobpositions",
+  "/api/jobseekers/getJobSeekers": "/jobseekers",
+  "/api/languages/getLanguages": "/languages",
+  "/api/schools/getSchools": "/schools",
+  "/api/systempersonels/getSystemPersonels": "/systempersonels",
+  "/api/technologies/gettechnologies": "/technologies"
 }
