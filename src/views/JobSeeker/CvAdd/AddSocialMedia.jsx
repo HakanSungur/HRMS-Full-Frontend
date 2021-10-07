@@ -14,14 +14,14 @@ export default function AddSocialMedia(props) {
   return (
     <div>
       <span
-        title={"Kullanıcı Adı Ekle"}
+        title={"Kullanıcı Linki Ekle"}
         className="bg-indigo-500 cursor-pointer px-2 text-blueGray-300 active:bg-indigo-500 hover:bg-purple-400 text-xs font-semibold capitalize px-1 rounded shadow outline-none focus:outline-none mr-1 ease-linear transition-all duration-250"
         onClick={async () => {
           try {
-            const { value: githubUserName } = await Swal.fire({
-              title: "Github Kullanıcı Adı",
+            const { value: githubLink } = await Swal.fire({
+              title: "Github Linkinizi Giriniz",
               input: "text",
-              inputPlaceholder: "Github kullanıcı adınızı giriniz",
+              inputPlaceholder: "Github linkinizi giriniz",
               showCancelButton: true,
               cancelButtonText: "Vazgeç",
               confirmButtonText: "Kaydet",
@@ -42,10 +42,10 @@ export default function AddSocialMedia(props) {
             });
 
             if (githubUserName) {
-              const { value: linkedinUserName } = await Swal.fire({
-                title: "Linkedin Kullanıcı Adı",
+              const { value: linkedinLink } = await Swal.fire({
+                title: "Linkedin Linki",
                 input: "text",
-                inputPlaceholder: "Linkedin kullanıcı adınızı giriniz",
+                inputPlaceholder: "Linkedin linki giriniz",
                 showCancelButton: true,
                 cancelButtonText: "Vazgeç",
                 confirmButtonText: "Kaydet",
@@ -64,12 +64,12 @@ export default function AddSocialMedia(props) {
                   });
                 },
               });
-              if (linkedinUserName) {
+              if (linkedinLink) {
                 let socialMedia = {
-                  curriculaVitaeId: props.getSocialMedias(),
-                  githubUsername: githubUserName,
+                  CvId: props.getSocialMedias(),
+                  githubLink: githubLink,
                   id: 0,
-                  linkedinUsername: linkedinUserName,
+                  linkedinLink: linkedinLink,
                 };
                 addSocialMedia(socialMedia);
                 Swal.fire({
@@ -89,7 +89,7 @@ export default function AddSocialMedia(props) {
               }
             }
           } catch (e) {
-            // console.log(e)
+            
             Swal.fire({
               icon: "error",
               title: "HATA",

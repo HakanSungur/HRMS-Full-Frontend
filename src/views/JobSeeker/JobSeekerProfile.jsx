@@ -261,23 +261,8 @@ export default function JobSeekerProfile() {
                     }}
                   />
                 </div>
-                {/*<div*/}
-                {/*    className="w-full absolute lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center"*/}
-                {/*    style={{marginLeft: "27em"}}>*/}
-                {/*    <div className="py-6 px-3 mt-32 sm:mt-0">*/}
-                {/*        <button*/}
-                {/*            className="bg-indigo-500 text-blueGray-300 active:bg-indigo-500 hover:bg-purple-400 text-sm font-bold uppercase px-6 py-2 rounded shadow mt-3 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-250"*/}
-
-                {/*        >*/}
-                {/*            <i className={"fas fa-lg fa-user-edit"}></i> Düzenle*/}
-                {/*        </button>*/}
-                {/*    </div>*/}
-                {/*</div>*/}
               </div>
               <form>
-                {/*<h6 className="text-black text-sm mt-3 mb-6 font-bold uppercase">*/}
-                {/*    Kişisel Bilgiler*/}
-                {/*</h6>*/}
                 <div className="flex flex-wrap mt-10">
                   <div className="w-full lg:w-6/12 px-12">
                     <div className="relative w-full mb-3">
@@ -485,7 +470,9 @@ export default function JobSeekerProfile() {
                               Bitiş Tarihi
                             </label>
                             <input
-                              type={education.endDate === null ? "text" : "date"}
+                              type={
+                                education.endDate === null ? "text" : "date"
+                              }
                               className="border-0 px-3 py-2 placeholder-blueGray-600 text-blueGray-600 bg-white rounded text-sm font-semibold shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                               defaultValue={
                                 education.endDate === null
@@ -828,16 +815,7 @@ export default function JobSeekerProfile() {
                           {technology.plName}
                         </span>
                       ))}
-                      {/*<textarea*/}
-                      {/*    type="text"*/}
-                      {/*    className="border-0 px-3 py-3 placeholder-blueGray-600 font-semibold text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"*/}
-                      {/*    rows="2"*/}
-                      {/*    placeholder={"Örn: Python,C#,Excel vb"}*/}
-                      {/*    maxLength={200}*/}
-                      {/*    defaultValue={plNames}*/}
-                      {/*    readOnly={true}*/}
-                      {/*    style={{cursor: "default"}}*/}
-                      {/*></textarea>*/}
+                      
                     </div>
                   </div>
                 </div>
@@ -859,8 +837,8 @@ export default function JobSeekerProfile() {
                     style={{ marginLeft: "56%" }}
                   >
                     <div className="py-2 px-2 sm:mt-0">
-                      {cvSocialMedias?.githubUsername != null ||
-                      cvSocialMedias?.linkedinUsername != null ? (
+                      {cvSocialMedias?.githubLink != null ||
+                      cvSocialMedias?.linkedinLink != null ? (
                         <UpdateSocialMedia
                           getSocialMedias={() => getSocialMedias()}
                         />
@@ -882,8 +860,8 @@ export default function JobSeekerProfile() {
                       <input
                         type="text"
                         className="border-0 px-3 py-2 placeholder-blueGray-600 font-semibold text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                        placeholder={"Github Kullanıcı Adı"}
-                        defaultValue={cvSocialMedias?.githubUsername}
+                        placeholder={"Github Linki"}
+                        defaultValue={cvSocialMedias?.githubLink}
                         style={{ cursor: "default" }}
                         readOnly={true}
                       />
@@ -899,7 +877,7 @@ export default function JobSeekerProfile() {
                         type="text"
                         className="border-0 px-3 py-2 placeholder-blueGray-600 font-semibold text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                         placeholder={"Linkedin Kullanıcı Adı"}
-                        defaultValue={cvSocialMedias?.linkedinUsername}
+                        defaultValue={cvSocialMedias?.linkedinLink}
                         style={{ cursor: "default" }}
                         readOnly={true}
                       />
@@ -907,18 +885,7 @@ export default function JobSeekerProfile() {
                   </div>
                 </div>
 
-                {/*<hr className="mt-6 border-b-1 border-blueGray-300"/>*/}
-
-                {/*<div className="w-full lg:w-6/12 px-12 mx-auto">*/}
-                {/*    <div className="relative w-full mt-8">*/}
-                {/*        <button*/}
-                {/*            className="bg-indigo-500 text-blueGray-300 active:bg-indigo-500 hover:bg-purple-400 text-sm font-bold uppercase px-12 w-full py-3 rounded shadow mt-3 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"*/}
-                {/*            type="button"*/}
-                {/*        >*/}
-                {/*            Kaydet*/}
-                {/*        </button>*/}
-                {/*    </div>*/}
-                {/*</div>*/}
+               
               </form>
             </div>
           </div>

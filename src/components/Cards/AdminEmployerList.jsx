@@ -33,7 +33,7 @@ export default function AdminEmployerList({ color }) {
   return (
     <>
       <h3 className="text-4xl mb-2 font-semibold leading-normal text-blueGray-600  text-center">
-        <i className="fas fa-building"></i> Şirketler
+        <i className="fas fa-building"></i> İlan Veren Kurumlar
       </h3>
       <div className="relative mb-2 lg:w-3/12 ml-auto mr-auto rounded">
         <span className="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3">
@@ -65,7 +65,7 @@ export default function AdminEmployerList({ color }) {
                     (color === "light")
                   }
                 >
-                  Şirket
+                  Kurum Adı
                 </th>
                 <th
                   className={

@@ -4,7 +4,7 @@ import { Form, Formik } from "formik";
 import CVService from "../../services/CVService";
 import Footer from "../../components/Footers/Footer";
 
-export default function AddCurriculaVitae(props) {
+export default function AddCv(props) {
   const cVService = new CVService();
 
   let jobSeekerId = 42;
@@ -89,14 +89,14 @@ export default function AddCurriculaVitae(props) {
                 coverLetter: "",
               }}
               onSubmit={(values) => {
-                const curriculaVitae = {
+                const cV = {
                   id: 0,
                   jobSeekerId: jobSeekerId,
                   coverLetter: values.coverLetter,
                   pictureUrl: "",
                 };
 
-                addCv(curriculaVitae)
+                addCv(cV)
                   .then((res) => {
                     if (res.includes("Error")) {
                       Swal.fire({

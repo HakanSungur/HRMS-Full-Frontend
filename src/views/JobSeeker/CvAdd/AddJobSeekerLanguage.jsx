@@ -134,7 +134,7 @@ export default function AddJobSeekerLanguage(props) {
               });
             }
           } catch (e) {
-            // console.log(e)
+           
             Swal.fire({
               icon: "error",
               title: "HATA",

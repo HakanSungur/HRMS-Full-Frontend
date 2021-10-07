@@ -68,7 +68,7 @@ export default function JobseekerDropdown(props) {
                           confirmButtonText: `Sil`,
                           denyButtonText: `Vazgeç`,
                         }).then((result) => {
-                          /* Read more about isConfirmed, isDenied below */
+                          
                           if (result.isConfirmed) {
                             props.deleteJobseeker();
                             const Toast = Swal.mixin({

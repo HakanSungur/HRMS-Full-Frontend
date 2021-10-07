@@ -17,7 +17,7 @@ export default function UserDropdown() {
                         <span
                             className="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full"> <img
                             alt="..." className="w-full rounded-full align-middle border-none shadow-lg mb-2"
-                            src={"https://avatars.githubusercontent.com/u/61664693?v=4"}/> </span>
+                            src={"https://avatars.githubusercontent.com/u/78656630?s=64&v=4"}/> </span>
                     </Menu.Button>
                 </div>
 

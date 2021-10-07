@@ -75,7 +75,7 @@ export default function AddJobExperiences(props) {
                 },
               });
               if (positionName) {
-                // console.log(`Bölüm id: ${departmentName}`)
+                
                 const { value: formValues } = await Swal.fire({
                   html:
                     '<h1 style="margin-top:5%;font-size: 30px;font-family: Ubuntu;">3/3 Başlangıç Tarihi</h1><input type="date" id="swal-input1" class="swal2-input">' +

@@ -701,7 +701,7 @@ export default function HomeJobAdvertList() {
                     >
                       {jobAdvert.deadline}
                     </h2>{" "}
-                    {/*moment js kullanılabilir*/}
+                    
                     <h2
                       className={
                         index % 2 == 1

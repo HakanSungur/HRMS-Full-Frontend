@@ -2,7 +2,7 @@ import React from "react";
 import { Menu } from "@headlessui/react";
 import Swal from "sweetalert2";
 
- function classNames(...classes) {
+function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 

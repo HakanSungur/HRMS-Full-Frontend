@@ -64,11 +64,11 @@ export default function JobAdvertDropdown(props) {
                           icon: "warning",
                           title: "Emin misiniz?",
                           showDenyButton: true,
-                          // showCancelButton: true,
+                          
                           confirmButtonText: `Sil`,
                           denyButtonText: `Vazgeç`,
                         }).then((result) => {
-                          /* Read more about isConfirmed, isDenied below */
+                          
                           if (result.isConfirmed) {
                             props.deleteJobAdvert();
                             const Toast = Swal.mixin({
@@ -95,7 +95,7 @@ export default function JobAdvertDropdown(props) {
                               html: "<h1 style='font-family: Ubuntu;color: white;'>Başarıyla Kaldırıldı!</h1>",
                             });
                           } else if (result.isDenied) {
-                            // Swal.fire('Changes are not saved', '', 'info')
+                            
                           }
                         });
                       }}

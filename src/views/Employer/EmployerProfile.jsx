@@ -394,7 +394,7 @@ export default function EmployerProfile() {
                 <div className="w-full lg:w-6/12 px-12">
                   <div className="relative w-full mb-3">
                     <label className="block uppercase text-black text-xs font-semibold font-bold mb-2">
-                      Şirket Adı
+                      Kurum Adı
                     </label>
                     <input
                       type="text"
@@ -507,22 +507,7 @@ export default function EmployerProfile() {
                   >
                     Pozisyon
                   </th>
-                  {/*<th*/}
-                  {/*    className={*/}
-                  {/*        "align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +*/}
-                  {/*        (color === "light")*/}
-                  {/*    }*/}
-                  {/*>*/}
-                  {/*    Açık Pozisyon*/}
-                  {/*</th>*/}
-                  {/*<th*/}
-                  {/*    className={*/}
-                  {/*        "px-4 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +*/}
-                  {/*        (color === "light")*/}
-                  {/*    }*/}
-                  {/*>*/}
-                  {/*    Açıklama*/}
-                  {/*</th>*/}
+                  
                   <th
                     className={
                       "px-3 align-middle border border-indigo-400 py-3 text-sm uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left "
@@ -609,16 +594,7 @@ export default function EmployerProfile() {
                       <td className="border-b border-indigo-400 px-4 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap py-3">
                         {jobAdvert.jobPosition.jobTitle}
                       </td>
-                      {/*<td className="border-b border-indigo-400 lg:px-10 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">*/}
-                      {/*    {jobAdvert.positionCount}*/}
-                      {/*</td>*/}
-                      {/*<td className="border-b border-indigo-400 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">*/}
-                      {/*    <div className="flex items-center">*/}
-                      {/*        <div className="relative w-full">*/}
-                      {/*            {jobAdvert.description}*/}
-                      {/*        </div>*/}
-                      {/*    </div>*/}
-                      {/*</td>*/}
+                     
                       <td className="border-b border-indigo-400 px-4 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap py-3">
                         {jobAdvert.salary}(₺)
                       </td>

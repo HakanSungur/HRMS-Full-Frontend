@@ -12,7 +12,7 @@ export default function ProfileNavbar(props) {
               to="/home"
               className="text-blueGray-700 hover:text-lightBlue-600 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
             >
-              <i className="fas fa-lg fa-home"></i> HRMS
+              <i className="fas fa-lg fa-home"></i> İNSAN KAYNAKLARI YÖNETİM SİSTEMİ
             </Link>
           </div>
           <div

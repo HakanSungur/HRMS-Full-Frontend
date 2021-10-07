@@ -36,17 +36,11 @@ export default function Home() {
     return (
         <div style={{background: "linear-gradient(#fff, #8BA5BEFF)", backgroundColor: "#51627f"}}>
             <HomeNavbar fixed/>
-            {/*<section className="header relative pt-16 items-center absolute h-screen max-h-860-px">*/}
+            
 
             {isNull ? <EmptyJobAdvertList/> : <HomeJobAdvertList/>}
 
-            {/*img dosyası*/}
-            {/*<img*/}
-            {/*    className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px"*/}
-            {/*    src={require("assets/img/pattern_react.png").default}*/}
-            {/*    alt="..."*/}
-            {/*/>*/}
-            {/*</section>*/}
+            
 
             <section className="mt-20 relative bg-blueGray-100">
                 <div

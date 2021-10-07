@@ -105,7 +105,7 @@ export default function AddEducation(props) {
                 },
               });
               if (departmentName) {
-                // console.log(`Bölüm id: ${departmentName}`)
+                
                 const { value: formValues } = await Swal.fire({
                   html:
                     '<h1 style="margin-top:5%;font-size: 30px;font-family: Ubuntu;">3/3 Başlangıç Tarihi</h1><input type="date" id="swal-input1" class="swal2-input">' +
@@ -171,9 +171,9 @@ export default function AddEducation(props) {
                 timer: 1500,
               });
             }
-            // console.log(departmentName + " " + schoolName)
+            
           } catch (e) {
-            // console.log(e)
+            
             Swal.fire({
               icon: "error",
               title: "HATA",
